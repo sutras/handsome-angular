@@ -1,0 +1,37 @@
+<div class="layout-wapper" [ngClass]="{'sidebar-show': sidebarShow}">
+    <div class="layout-topbar">
+        <a class="menu-button" (click)="menuButtonClick()">
+            <span class="menu-button-icon">
+                <i class="menu-button-line"></i>
+                <i class="menu-button-line"></i>
+                <i class="menu-button-line"></i>
+            </span>
+        </a>
+        <ul class="topbar-menu">
+            <li class="topbar-menu-item">
+                <a class="topbar-menu-link" routerLink="/home" routerLinkActive="active">首页</a>
+            </li>
+            <li class="topbar-menu-item">
+                <a class="topbar-menu-link" routerLink="/components" routerLinkActive="active">组件</a>
+            </li>
+        </ul>
+    </div>
+    <div class="layout-sidebar">
+        <a class="layout-logo" routerLink="/">HandSome</a>
+        <ul class="sidebar-menu">
+            <li class="sidebar-menu-category">
+                表单 <small>form</small>
+            </li>
+            <li class="sidebar-menu-item">
+                <a class="sidebar-menu-link" routerLink="./button" routerLinkActive="active">按钮 <small>buttton</small></a>
+            </li>
+            <li class="sidebar-menu-item">
+                <a class="sidebar-menu-link" routerLink="./input" routerLinkActive="active">输入框 <small>input</small></a>
+            </li>
+        </ul>
+    </div>
+    <div class="layout-mask" (click)="maskClick()"></div>
+    <div class="layout-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
